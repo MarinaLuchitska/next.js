@@ -1,7 +1,8 @@
-const BaseURL = 'https://jsonplaceholder.typicode.com';
+import 'server-only';
 
+const BASE = 'http://owu.linkpc.net/carsAPI/v1/cars';
 
-export const  getAll =async <T>(endpoint:string): Promise<T> =>{
-    const newar = await fetch(`${BaseURL}${endpoint}`).then(res=> res.json());
-    return newar;
+export async function getAllCarsApi() {
+    const res = await fetch(BASE, { cache: 'no-store' });
+    return res.json();
 }
