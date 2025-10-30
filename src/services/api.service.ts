@@ -1,4 +1,4 @@
-import 'server-only';
+// import 'server-only';
 
 const BASE = 'http://owu.linkpc.net/carsAPI/v1/cars';
 
